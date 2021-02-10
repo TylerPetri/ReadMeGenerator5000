@@ -5,6 +5,8 @@ const fs = require('fs')
 const generateFile = questions => {return `
 ## ${questions.Title}
 
+![License](https://img.shields.io/badge/License-${encodeURI(questions.License)}-${questions.Color}.svg)
+
 ## Description
 
 ${questions.Description}
@@ -38,6 +40,9 @@ ${questions.Contributing}
 ${questions.Tests}
 
 ## Questions
+
+For any additional questions see my GitHub profile ${questions.GitHubProfile} or contact ${questions.Email}
+
 `}
 
 async function init(){
@@ -69,28 +74,32 @@ async function init(){
         {
             type: "list",
             message: "Choose license",
-            choices: ['Apache 2.0','Boost Software 1.0','BSD 3-Clause','BSD 2-Clause','CC0','Attribution 4.0 International',
-                        'Attribution-ShareAlike 4.0 International','Attribution-NonCommercial 4.0 International','Attribution-NoDerivates 4.0 International','Attribution-NonCommercial-ShareAlike 4.0 International',
-                        'Attribution-NonCommercial-NoDerivatives 4.0 International','Eclipse Public 1.0','GNU GPL v3','GNU GPL v2','GNU AGPL v3','GNU LGPL v3','GNU FDL v1.3',
-                        'IBM Public License Version 1.0', 'ISC','MIT','Mozilla Public 2.0','Attribution (BY)','Open Database (OBbL)','Public Domain Dedication and License (PDDL)',
-                        'Perl','Artistic 2.0','SIL Open Font 1.1', 'Unlicense','The Do What the Fuck You Want to Public License','zlib/libpng'],
+            choices: ['Apache 2.0','Boost 1.0','BSD 3--Clause','BSD 2--Clause','CC0 1.0','CC BY 4.0',
+                        'CC BY--SA 4.0','CC BY--NC 4.0','CC BY--ND 4.0','CC BY--NC--SA 4.0',
+                        'CC BY--NC--ND 4.0','EPL 1.0','GPLv3','GPL v2','AGPL v3','LGPL v3','FDL v1.3',
+                        'IPL 1.0','ISC','MIT','MPL 2.0','ODC_BY','ODbL','PDDL',
+                        'Perl','Artistic 2.0','OFL 1.1', 'Unlicense','WTFPL','Zlib'],
             name: "License"
         },
         {
+            type: "list",
+            message: "Choose badge color",
+            choices: ['brightgreen','green','yellowgreen','yellow','orange','red','blue','lightrey',
+                        'success','important','critical','informational','inactive','blueviolet','ff69b4','9cf'],
+            name: "Color"
+        },
+        {
             message: "Enter github username",
-            name: "GitHub profile"
+            name: "GitHubProfile"
         },
         {
             message: "Enter email address",
             name: "Email"
-        }
+        },
             
     ]) 
     fs.writeFileSync("README.md", generateFile(questions))
 }
-
-// TODO: Create a function to write README file
-// fs.writeFileSync('README.md', questions)
 
 // TODO: Create a function to initialize app
 // function init() {}
