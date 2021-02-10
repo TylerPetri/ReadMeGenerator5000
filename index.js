@@ -41,7 +41,7 @@ ${questions.Tests}
 
 ## Questions
 
-For any additional questions see my GitHub profile github.com/${questions.GitHubProfile} or contact ${questions.Email}
+For any additional questions see my GitHub profile [github.com/${questions.GitHubProfile}] or contact ${questions.Email}
 
 `}
 
