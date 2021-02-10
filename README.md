@@ -37,5 +37,5 @@ testtest
 
 ## Questions
 
-For any additional questions see my GitHub profile tylerpetri or contact tyler@tyler
+For any additional questions see my GitHub profile github.com/tylerpetri or contact tyler@tyler.com
 
