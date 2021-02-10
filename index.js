@@ -2,6 +2,44 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
 
+const generateFile = questions => {return `
+## ${questions.Title}
+
+## Description
+
+${questions.Description}
+
+## Table of Contents
+
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#License)
+- [Contributing](#Contributing)
+- [Tests](#Tests)
+
+## Installation
+
+${questions.Installation}
+
+## Usage
+
+${questions.Usage}
+
+## License
+
+${questions.License}
+
+## Contributing
+
+${questions.Contributing}
+
+## Tests
+
+${questions.Tests}
+
+## Questions
+`}
+
 async function init(){
     const questions = await inquirer.prompt([
         {
@@ -48,7 +86,7 @@ async function init(){
         }
             
     ]) 
-    // fs.writeFileSync("README.md", questions)
+    fs.writeFileSync("README.md", generateFile(questions))
 }
 
 // TODO: Create a function to write README file
