@@ -26,6 +26,12 @@ $git clone link
 
 ![clone](assets/Installation.PNG)
 
+Once you've opened your folder, `npm init` to that folder
+
+Then `npm install inquirer`
+
+You now have the node modules necessary to complete the code
+
 ## Usage
 
 [![Instructional video link](assets/Youtube.PNG)](https://www.youtube.com/watch?v=RwcQyT1jto8&feature=youtu.be)
