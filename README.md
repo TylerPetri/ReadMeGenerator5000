@@ -19,11 +19,16 @@ The best readme generator ever. Invoked with `node index.js`, you answer a few q
 
 As for now, there is only the code you see here. We are working on a deployed app.
 
-[!clone](assets/Installation.PNG)
+To download, click the green "code" button in the top right, and copy paste that link into git bash.
+
+
+$git clone link
+
+![clone](assets/Installation.PNG)
 
 ## Usage
 
-[![Usage_video](https://www.youtube.com/watch?v=RwcQyT1jto8&feature=youtu.be/0.jpg)](https://www.youtube.com/watch?v=RwcQyT1jto8&feature=youtu.be)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RwcQyT1jto8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## License
 
@@ -31,7 +36,10 @@ MIT
 
 ## Contributing
 
-There are many ways in which you can participate in the project, for example: * Submit bugs and fature requests to the email below, and help us verify as they are checked in * Review source code changes * Review the documentation and make pull requests for anything from typos to new content
+There are many ways in which you can participate in the project, for example: 
+* Submit bugs and feature requests to the email below, and help us verify as they are checked in 
+* Review source code changes
+* Review the documentation and make pull requests for anything from typos to new content
 
 ## Tests
 
