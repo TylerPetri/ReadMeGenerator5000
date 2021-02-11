@@ -28,7 +28,7 @@ $git clone link
 
 ## Usage
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RwcQyT1jto8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Instructional video link](assets/Youtube.PNG)](https://www.youtube.com/watch?v=RwcQyT1jto8&feature=youtu.be)
 
 ## License
 
