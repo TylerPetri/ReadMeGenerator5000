@@ -41,7 +41,7 @@ ${questions.Tests}
 
 ## Questions
 
-For any additional questions see my GitHub profile [github.com/${questions.GitHubProfile}] or contact ${questions.Email}
+For any additional questions see my [GitHub profile](http://github.com/${questions.GitHubProfile}) or contact ${questions.Email}
 
 `}
 
@@ -74,12 +74,23 @@ async function init(){
         {
             type: "list",
             message: "Choose license",
-            choices: ['Apache 2.0','Boost 1.0','BSD 3--Clause','BSD 2--Clause','CC0 1.0','CC BY 4.0',
-                        'CC BY--SA 4.0','CC BY--NC 4.0','CC BY--ND 4.0','CC BY--NC--SA 4.0',
-                        'CC BY--NC--ND 4.0','EPL 1.0','GPLv3','GPL v2','AGPL v3','LGPL v3','FDL v1.3',
-                        'IPL 1.0','ISC','MIT','MPL 2.0','ODC_BY','ODbL','PDDL',
-                        'Perl','Artistic 2.0','OFL 1.1', 'Unlicense','WTFPL','Zlib'],
-            name: "License"
+            choices: ['Apache 2.0','Boost 1.0','BSD 3-Clause','BSD 2-Clause','Attribution 4.0 International',
+                        'Attribution-ShareAlike 4.0 International','Attribution-NonCommercial 4.0 International','Attribution-NoDerivates 4.0 International','Attribution-NonCommercial-ShareAlike 4.0 International',
+                        'Attribution-NonCommercial-NoDervatives 4.0 International','Eclipse Public License 1.0','GNU GPL v3','GNU GPL v2','GNU AGPL v3','GNU LGPL v3','GNU FDL v1.3',
+                        'IBM Public 1.0','ISC','MIT','Mozilla Public 2.0','Attribution License (BY)','Open database License (ODbL)','Public Domain Dedication and License (PDDL)',
+                        'Perl','Artistic 2.0','SIL Open Font 1.1', 'Unlicense','The Do What the Fuck You Want to Public License','Zlib/Libpng'],
+            name: "License",
+            transformer: function (a) {
+                
+                    let badges = ['Apache 2.0','Boost 1.0','BSD 3--Clause','BSD 2--Clause','CC0 1.0','CC BY 4.0',
+                    'CC BY--SA 4.0','CC BY--NC 4.0','CC BY--ND 4.0','CC BY--NC--SA 4.0',
+                    'CC BY--NC--ND 4.0','EPL 1.0','GPLv3','GPL v2','AGPL v3','LGPL v3','FDL v1.3',
+                    'IPL 1.0','ISC','MIT','MPL 2.0','ODC_BY','ODbL','PDDL',
+                    'Perl','Artistic 2.0','OFL 1.1', 'Unlicense','WTFPL','Zlib']
+
+                    let position = this.choices.infexOf(a)
+                    return badges[position]
+            }
         },
         {
             type: "list",
